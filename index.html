@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HandbookBrain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="static/app.css?v=202610172100">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#/overview" aria-label="HandbookBrain">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg>
+      <span>HandbookBrain</span>
+    </a>
+    <nav aria-label="Main" class="nav">
+      <a href="#/overview" data-nav="overview">Overview</a>
+      <a href="#/ask" data-nav="ask">Ask</a>
+      <a href="#/learn" data-nav="learn">Learn</a>
+      <a href="#/explore" data-nav="explore">Explore</a>
+      <a href="#/review" data-nav="review">Review <span class="count" id="nav-review" hidden></span></a>
+      <a href="#/how" data-nav="how">How it works</a>
+    </nav>
+    <div class="grow"></div>
+    <span class="pill" id="sync-pill"><span class="dot"></span><span id="sync-text">…</span></span>
+  </div>
+</header>
+<main id="view" class="wrap" tabindex="-1"></main>
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <button class="icon-btn close" id="drawer-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div id="drawer-body"></div>
+  </div>
+</div>
+<aside id="coach" class="coach" hidden aria-labelledby="coach-title">
+  <div class="coach-h">
+    <div style="min-width:0"><span class="eyebrow" id="coach-kind">Ask about this</span><div id="coach-title" class="coach-title"></div></div>
+    <button class="icon-btn" id="coach-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="coach-body" id="coach-body"></div>
+  <form class="coach-f" id="coach-f"><label class="sr" for="coach-q">Your question</label><textarea id="coach-q" rows="2" placeholder="Ask anything about this…"></textarea><button class="btn primary" type="submit">Ask</button></form>
+</aside>
+<div id="termpop" class="termpop" role="dialog" aria-label="Term definition" hidden></div>
+<script src="static/demo.js"></script>
+<script src="static/graph.js?v=202610172100"></script>
+<script src="static/app.js?v=202610172100"></script>
+</body>
+</html>

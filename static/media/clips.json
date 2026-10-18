@@ -1,0 +1,20 @@
+{
+ "learn": {
+  "start": 0.82
+ },
+ "ask": {
+  "start": 0.82
+ },
+ "explore": {
+  "start": 1.26
+ },
+ "impact": {
+  "start": 0.97
+ },
+ "review": {
+  "start": 0.91
+ },
+ "falkor": {
+  "start": 1.08
+ }
+}
